@@ -28,8 +28,11 @@ var urlParams;
 
 var site = urlParams["sites"];
 var category = urlParams["categories"] == "todas" ? "" : urlParams["categories"];
-var cols = urlParams["cols"] < 1 ? 5 : urlParams["cols"];
-var rows = urlParams["rows"] < 1 ? 5 : urlParams["rows"];
+var cols = urlParams["cols"];
+cols = cols < 3 | cols > 5 ? 5 : cols;
+var rows = urlParams["rows"];
+rows = rows < 3 | rows > 5 ? 5 : rows;
+
 var trend_type = urlParams["trend_type"] || "nombre";
 
 var trends = ['cargando trends de ' + site + "..."];
