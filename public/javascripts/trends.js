@@ -41,7 +41,8 @@ fetch('https://api.mercadolibre.com/trends/' + site + "/" + category)
   .then(function(myJson) {
     if (myJson) {
       if (trend_type == "imagen") {
-        // trends = myJson.map(function(i) {return search()})
+        trends = ['no hay imágenes en' + site + " :("];
+
       } else {
         trends = myJson.map(function(i) {return i.keyword});
       }
