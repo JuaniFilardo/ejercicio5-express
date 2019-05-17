@@ -34,18 +34,6 @@ var trend_type = urlParams["trend_type"] || "nombre";
 
 var trends = ['cargando trends de ' + site + "..."];
 
-
-const images = require("google-images");
-
-images.search('Halo', function (err, images) {
-  console.log(images)
-})
-
-images.search("Halo", function (error, images) {
-  console.log(images);
-});
-
-
 fetch('https://api.mercadolibre.com/trends/' + site + "/" + category)
   .then(function(response) {
     return response.json();

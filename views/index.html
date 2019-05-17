@@ -10,31 +10,37 @@
 </head>
 <body>
     <div class="container-fluid">
-        <form action="/trends">
-            <div id="sites" class="form-group"></div>
-            <div id="categories" class="form-group"></div>
-            <div id="trends_size" class="row form-group">
-                <div class="col-sm-6">
-                    <label for="height">Cantidad de columnas</label>
-                    <input type="text" name="cols" class="form-control" id="height" placeholder="Columnas" value="5">
+        <div style="margin: 32px"></div>
+        <div class="row"></div>
+        <div class="col-sm-4"></div>
+        <div class="col-sm-4">
+            <form action="/trends">
+                <div id="sites" class="form-group"></div>
+                <div id="categories" class="form-group"></div>
+                <div id="trends_size" class="row form-group">
+                    <div class="col-sm-6">
+                        <label for="height">Cantidad de columnas</label>
+                        <input type="text" name="cols" class="form-control" id="height" placeholder="Columnas" value="5">
+                    </div>
+                    <div class="col-sm-6">
+                        <label for="width">Cantidad de filas</label>
+                        <input type="text" name="rows" class="form-control" id="width" placeholder="Filas" value="5">
+                    </div>
                 </div>
-                <div class="col-sm-6">
-                    <label for="width">Cantidad de filas</label>
-                    <input type="text" name="rows" class="form-control" id="width" placeholder="Filas" value="5">
+                <div id="trends_type" class="form-group">
+                    <div class="radio-inline">
+                        <label><input type="radio" name="trend_type" value="nombre" checked>Nombre</label>
+                    </div>
+                    <div class="radio-inline">
+                        <label><input type="radio" name="trend_type" value="imagen">Imagen</label>
+                    </div>
                 </div>
-            </div>
-            <div id="trends_type" class="form-group">
-                <div class="radio-inline">
-                    <label><input type="radio" name="trend_type" value="nombre" checked>Nombre</label>
+                <div id="buttons" class="form-group">
+                    <button type="submit" id="submit_button" class="btn btn-default">Trends</button>
                 </div>
-                <div class="radio-inline">
-                    <label><input type="radio" name="trend_type" value="imagen">Imagen</label>
-                </div>
-            </div>
-            <div id="buttons" class="form-group">
-                <button type="submit" id="submit_button" class="btn btn-default">Trends</button>
-            </div>
-        </form>
+            </form>
+        </div>
+        <div class="col-sm-4"></div>
     </div>
 </body>
 </html>
